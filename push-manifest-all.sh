@@ -19,32 +19,32 @@ fi
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template mkodockx/docker-clamav:buster-slim-ARCHVARIANT \
-    --target mkodockx/docker-clamav:buster-slim
+    --template viloge6407/clamav:buster-slim-ARCHVARIANT \
+    --target viloge6407/clamav:buster-slim
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template mkodockx/docker-clamav:buster-slim-ARCHVARIANT \
-    --target mkodockx/docker-clamav:latest
+    --template viloge6407/clamav:buster-slim-ARCHVARIANT \
+    --target viloge6407/clamav:latest
     
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm64/v8 \
-    --template mkodockx/docker-clamav:stretch-slim-ARCHVARIANT \
-    --target mkodockx/docker-clamav:stretch-slim
+    --template viloge6407/clamav:stretch-slim-ARCHVARIANT \
+    --target viloge6407/clamav:stretch-slim
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template mkodockx/docker-clamav:alpine-ARCHVARIANT \
-    --target mkodockx/docker-clamav:alpine
+    --template viloge6407/clamav:alpine-ARCHVARIANT \
+    --target viloge6407/clamav:alpine
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template mkodockx/docker-clamav:alpine-idb-ARCHVARIANT \
-    --target mkodockx/docker-clamav:alpine-idb
+    --template viloge6407/clamav:alpine-idb-ARCHVARIANT \
+    --target viloge6407/clamav:alpine-idb
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template mkodockx/docker-clamav:alpine-edge-ARCHVARIANT \
-    --target mkodockx/docker-clamav:alpine-edge
+    --template viloge6407/clamav:alpine-edge-ARCHVARIANT \
+    --target viloge6407/clamav:alpine-edge
 
 echo "Manifest-Push to docker registry finished."
