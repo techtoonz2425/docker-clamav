@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker push mkodockx/docker-clamav:alpine-idb-amd64-v2021-05-25
+docker push viloge6407/clamav:alpine-idb-amd64-v2021-05-25
 
-docker push mkodockx/docker-clamav:alpine-idb-amd64
+docker push viloge6407/clamav:alpine-idb-amd64
