@@ -4,22 +4,22 @@ if [ -z ${1} ] ; then
   exit 1
 fi
 
-repo=${1}
+repo=viloge6407/clamav
 
-docker push ${repo}docker-clamav:buster-slim-amd64
-docker push ${repo}docker-clamav:buster-slim-armv7
-docker push ${repo}docker-clamav:buster-slim-arm64v8
+docker push ${repo}:buster-slim-amd64
+docker push ${repo}:buster-slim-armv7
+docker push ${repo}:buster-slim-arm64v8
 
-docker push ${repo}docker-clamav:stretch-slim-amd64
+docker push ${repo}:stretch-slim-amd64
 #docker push ${repo}docker-clamav:stretch-slim-armv7
-docker push ${repo}docker-clamav:stretch-slim-arm64v8
+docker push ${repo}:stretch-slim-arm64v8
 
-docker push ${repo}docker-clamav:alpine-amd64
-docker push ${repo}docker-clamav:alpine-armv7
-docker push ${repo}docker-clamav:alpine-arm64v8
+docker push ${repo}:alpine-amd64
+docker push ${repo}:alpine-armv7
+docker push ${repo}:alpine-arm64v8
 
-docker push ${repo}docker-clamav:alpine-edge-amd64
-docker push ${repo}docker-clamav:alpine-edge-armv7
-docker push ${repo}docker-clamav:alpine-edge-arm64v8
+docker push ${repo}:alpine-edge-amd64
+docker push ${repo}:alpine-edge-armv7
+docker push ${repo}:alpine-edge-arm64v8
 
 echo "Push to docker registry finished."
