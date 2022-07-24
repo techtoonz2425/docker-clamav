@@ -12,7 +12,7 @@ if [ -z ${3} ] ; then
   exit 1
 fi
 
-repo=${1}
+repo=viloge6407/clamav
 username=${2}
 password=${3}
 
@@ -24,27 +24,27 @@ fi
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template ${repo}docker-clamav:buster-slim-ARCHVARIANT \
-    --target ${repo}docker-clamav:buster-slim
+    --template ${repo}:buster-slim-ARCHVARIANT \
+    --target ${repo}:buster-slim
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template ${repo}docker-clamav:buster-slim-ARCHVARIANT \
-    --target ${repo}docker-clamav:latest
+    --template ${repo}:buster-slim-ARCHVARIANT \
+    --target ${repo}:latest
     
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm64/v8 \
-    --template ${repo}docker-clamav:stretch-slim-ARCHVARIANT \
-    --target ${repo}docker-clamav:stretch-slim
+    --template ${repo}:stretch-slim-ARCHVARIANT \
+    --target ${repo}:stretch-slim
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template ${repo}docker-clamav:alpine-ARCHVARIANT \
-    --target ${repo}docker-clamav:alpine
+    --template ${repo}:alpine-ARCHVARIANT \
+    --target ${repo}:alpine
 
 ./manifest-tool --username ${username} --password ${password} push from-args \
     --platforms linux/amd64,linux/arm/v7,linux/arm64/v8 \
-    --template ${repo}docker-clamav:alpine-edge-ARCHVARIANT \
-    --target ${repo}docker-clamav:alpine-edge
+    --template ${repo}:alpine-edge-ARCHVARIANT \
+    --target ${repo}:alpine-edge
 
 echo "Manifest-Push to docker registry finished."
